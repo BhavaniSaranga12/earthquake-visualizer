@@ -22,13 +22,13 @@ function App() {
       });
   }, []);
 
-  // 🌍 Colored marker icons for magnitudes
+  
   const getLocationIcon = (mag) => {
     let color;
-    if (mag >= 6) color = '#ef4444'; // red
-    else if (mag >= 4) color = '#f97316'; // orange
-    else if (mag >= 2) color = '#eab308'; // yellow
-    else color = '#22c55e'; // green
+    if (mag >= 6) color = '#ef4444';
+    else if (mag >= 4) color = '#f97316'; 
+    else if (mag >= 2) color = '#eab308'; 
+    else color = '#22c55e'; 
 
     const svgIcon = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${color}" stroke="" stroke-width="1.5">
@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-black via-zinc-900 to-neutral-900 text-gray-100">
-      {/* HERO SECTION */}
+      
       <section className="text-center py-10 bg-gradient-to-b from-black via-neutral-900 to-zinc-800 shadow-lg">
         <h1 className="text-4xl font-extrabold tracking-wide mb-2 animate-fadeIn text-white">
           🌍 Earthquake Visualizer
@@ -70,9 +70,9 @@ function App() {
         </p>
       </section>
 
-      {/* MAIN CONTENT */}
+      
       <div className="flex flex-col sm:flex-row flex-1 p-6 gap-6">
-        {/* LEFT SIDE MAP */}
+        
         <div className="sm:w-[70%] w-full rounded-2xl shadow-2xl overflow-hidden border border-gray-700 bg-zinc-800 flex flex-col">
           <div className="flex-1">
             <MapContainer
@@ -119,9 +119,9 @@ function App() {
           </div>
         </div>
 
-        {/* RIGHT SIDE INFO PANEL */}
+        
         <div className="sm:w-[30%] w-full bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl shadow-xl p-6 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl">
-          {/* Stats */}
+          
           <div className="text-center mb-6">
             <h2 className="text-xl font-semibold text-gray-200 uppercase">
               Today's Earthquakes
@@ -131,7 +131,7 @@ function App() {
             </p>
           </div>
 
-          {/* Latest Quakes */}
+          
           <div className="flex-1 overflow-y-auto space-y-3">
             <h3 className="text-lg font-semibold text-gray-300 mb-2 border-b border-gray-700 pb-1">
               Latest Earthquakes
@@ -160,7 +160,7 @@ function App() {
             ))}
           </div>
 
-          {/* Legend */}
+          
           <div className="mt-4 bg-zinc-900 border border-gray-700 rounded-lg p-3 text-sm shadow-inner">
             <h4 className="font-semibold mb-1 text-gray-200">
               Magnitude Legend
@@ -173,7 +173,7 @@ function App() {
         </div>
       </div>
 
-      {/* FOOTER */}
+      
       <footer className="text-center py-3 bg-black text-gray-400 text-sm shadow-inner">
         Built by <b>Bhavani</b> | Data Source: USGS API
       </footer>
